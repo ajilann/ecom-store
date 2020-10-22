@@ -15,7 +15,7 @@
   margin-left: auto;
 }
 
-.login__contianer {
+.login__container {
   width: 300px;
   height: fit-content;
   display: flex;
@@ -35,7 +35,7 @@
 }
 
 .login__container > form > input {
-  height: 3px;
+  height: 30px;
   margin-bottom: 10px;
   background-color: white;
   width: 98%;
