@@ -30,8 +30,7 @@ function Payment() {
             const response = await axios({// axios is way of making post or get request
                 method: 'post',
                 //Stripe expects the total in a currencies submits
-                url:`/payment/create?total=${getBasketTotal(basket) * 100}`
-    
+                url: `/payments/create?total=${getBasketTotal(basket) * 100}`    
             });
             setClientSecret(response.data.clientSecret)
             }
@@ -40,9 +39,10 @@ function Payment() {
         
     }, [basket])
 
+    console.log('The secret is >>>', clientSecret)
+
     const handleSubmit = async (event) => {
         // do all the stripe proces
-
         event.preventDefault();
         setProcessing(true);
 
