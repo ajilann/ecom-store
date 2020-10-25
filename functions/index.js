@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const { response } = require('express');
 const stripe = require("stripe")
-('sk_test_51GrO7LHhaJOiKRoB10qBdx5KAjBZDHGCA8s2oGgbJtmzUumygridIsi6hVz3II55qk46MPZaNvKlp3kBZ7bgBclf001mCI2QFk')
+('sk_test_51GrO7LHhaJOiKRoB10qBdx5KAjBZDHGCA8s2oGgbJtmzUumygridIsi6hVz3II55qk46MPZaNvKlp3kBZ7bgBclf001mCI2QFk');
 
 // API 
 
@@ -24,7 +24,7 @@ app.post('/payments/create', async (request, response) => {
     
     const paymentIntent = await stripe.paymentIntents.create({
         amount: total,  // subunits of the currency 
-        currency: "usd",
+        currency: "inr",
     });
 
     response.status(201).send({
